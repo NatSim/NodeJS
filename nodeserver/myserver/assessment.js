@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const fs = require("fs");
 
+
 //Runs in Terminal 
 const server = app.listen(5000, function (){
     console.log('Node server is running https://localhost:5000 ...');
@@ -57,18 +58,18 @@ const profiles = [{
     }
  }]
 
-//GET request
+//GET request [Works fine]
  app.get("/api/profiles", (req, res ) => {
      res.send(profiles);
  });
 
- //GET request with ID
+ //GET request with ID // Code Returns string with[object OBJECT]*I'm sTill searching for a "curl request in Windows and then see how I can pass headers"]
  app.get("/profiles/:id", (req, res ) => {
      let id = req.params.id;
      res.send(`This person is: ${profiles[id].profile1}`);
  });
 
- //PUT request (with ID)
+ //PUT request (with ID) [Works fine]
  app.put("/api/profiles", (req, res) => {
      console.log(req.body);
      let text = JSON.stringify(req.body);
@@ -78,13 +79,13 @@ const profiles = [{
      res.send("Well done! You did it");
  });
 
- //DELETE request 
+ //DELETE request [Currently unsuccessful for me] 
 let me = ["Natasha","Black Codher", 29];
  
-app.delete("/apo/profiles/:id" , (req, res) => {
+app.delete("/api/profiles/:id" , (req, res) => {
      console.log(me);
      let id = req.params.id;
-     me.splice(id,1);
+     me.splice(id, 1);
      console.log(me);
      res.send("It's all gone!!");
  })
