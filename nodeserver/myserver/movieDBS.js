@@ -24,25 +24,32 @@ const connect = async () => {
 
 connect();
 
-//GET request for movie database
+//listen on port 4000
+app.listen(4000, () => {
+  console.log("Server is running");
+});
+
+//GET request for movie database/pagination skip10/ ordered by title
 app.get("/film", async (req, res) => {
   const allFilms = await client
     .db("movie")
     .collection("film")
     .find({})
+    // .skip(10)
+    .limit(10)
     .toArray();
 
   res.json({
     message: "Here are all your films!",
-    films: allFilms,
+    films: allFilms.map((film) => film.title),
   });
 });
 
 //Creates, add to db
-app.post("/films", async (req, res) => {
+app.post("/film", async (req, res) => {
   const createdFilm = await client
     .db("movie")
-    .collection("films")
+    .collection("film")
     .insertOne(req.body);
 
   res.json({
@@ -52,10 +59,10 @@ app.post("/films", async (req, res) => {
 });
 
 //GET with route param id
-app.get("/films/:id", async (req, res) => {
+app.get("/film/:id", async (req, res) => {
   const matchingFilm = await client
     .db("movie")
-    .collection("films")
+    .collection("film")
     .findOne({ _id: new ObjectId(req.params.id) });
 
   res.json({
@@ -65,10 +72,10 @@ app.get("/films/:id", async (req, res) => {
 });
 
 //DELETE a film with an id of..
-app.delete("/films/:id", async (req, res) => {
+app.delete("/film/:id", async (req, res) => {
   await client
     .db("movie")
-    .collection("films")
+    .collection("film")
     .deleteOne({ _id: new ObjectId(req.params.id) });
 
   res.json({
@@ -77,12 +84,12 @@ app.delete("/films/:id", async (req, res) => {
 });
 
 //patch add/update to a file
-app.patch("/films/:id", async (req, res) => {
+app.patch("/film/:id", async (req, res) => {
   console.log(req.body);
 
   const updatedFilm = await client
     .db("movie")
-    .collection("films")
+    .collection("film")
     .updateOne({ _id: new ObjectId(req.params.id) }, { $set: req.body });
 
   const matchingFilm = await client
@@ -94,9 +101,4 @@ app.patch("/films/:id", async (req, res) => {
     message: "Updated a film",
     data: matchingFilm,
   });
-});
-
-//listen on port 4000
-app.listen(4000, () => {
-  console.log("Server is running");
 });
