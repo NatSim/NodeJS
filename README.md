@@ -1,6 +1,6 @@
 <h1> NodeJS </h1>
 
-Project name is **Node JS project**, this project consists of an coding enviroment featuring interaction with a created database.
+Project name is **Node JS project**, this project consists of a coding enviroment featuring interaction with a created database.
 
 🖋Content includes:
 
