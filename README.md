@@ -22,5 +22,5 @@ You have an understanding of **Node Javascript** & **Mongo DB**.
 
 If you want to contact me you can reach me at Natsimbig@gmail.com
 
-Happy coding ;-)!
+Happy coding😉!
 
