@@ -5,7 +5,7 @@ Project name is **Node JS project**, this project consists of a coding enviromen
 🖋Content includes:
 
 * Connecting to **Mongo Compass Database**
-* Using **CRUD** operationsThanks'Create,Read,Update and Delete' data (Assessment 1 file).
+* Using **CRUD** operations'Create,Read,Update and Delete' data (Assessment 1 file).
 * Adding pagination to a 'film collection'(Assessment 2 file)
 
 
