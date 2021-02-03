@@ -14,7 +14,7 @@ Project name is **Node JS project**, this project consists of an coding envirome
 
 Before you begin, ensure you have met the following requirements:
 
-You have an understanding of **Node Javascript** & **Mongo DB**.
+* You have an understanding of **Node Javascript** & **Mongo Compass Database**.
 
 🤔Please feel free to add feedback on this project!
 
