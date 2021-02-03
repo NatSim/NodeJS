@@ -2,7 +2,7 @@
 
 Project name is **Node JS project**, this project consists of a coding enviroment featuring interaction with a created database.
 
-🖋Content includes:
+<h2> 🖋Content includes: </h2>
 
 * Connecting to **Mongo Compass Database**
 * Using **CRUD** operations'Create,Read,Update and Delete' data (Assessment 1 file).
@@ -10,7 +10,7 @@ Project name is **Node JS project**, this project consists of a coding enviromen
 
 
 
-**Prerequisites**
+<h3> Prerequisites </h3>
 
 Before you begin, ensure you have met the following requirements:
 
@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 
 🤔Please feel free to add feedback on this project!
 
-**Contact**
+<h4>Contact</h4>
 
 If you want to contact me you can reach me at Natsimbig@gmail.com
 
