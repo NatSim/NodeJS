@@ -2,9 +2,11 @@
 
 Project name is **Node JS Assignement**, this project consists of an coding enviroment featuring interaction with a created database.
 
-Content include:
+🖋Content includes:
+
 * Connecting to **Mongo Compass Database**
-* Using **CRUD** operationsThanks'Create,Read,Update and Delete' data.
+* Using **CRUD** operationsThanks'Create,Read,Update and Delete' data (Assessment 1 file).
+* Adding pagination to a 'film collection'(Assessment 2 file)
 
 
 
@@ -13,6 +15,8 @@ Content include:
 Before you begin, ensure you have met the following requirements:
 
 You have an understanding of **Node Javascript** & **Mongo DB**.
+
+🤔Please feel free to add feedback on this project!
 
 **Contact**
 
